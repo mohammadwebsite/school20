@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <title>📚 مدرسه نمونه — ثبت‌نام و فروشگاه</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="site-title">🏫 مدرسه نمونه — سامانه ثبت‌نام و فروشگاه</h1>
+    </header>
+
+    <div class="container">
+        <!-- فرم ثبت‌نام -->
+        <div class="form-section card">
+            <h2>📋 فرم ثبت‌نام</h2>
+            <form id="signupForm">
+                <input type="text" id="fullname" placeholder="نام و نام خانوادگی" required>
+                <input type="number" id="age" placeholder="سن" required>
+                <input type="text" id="grade" placeholder="پایه تحصیلی" required>
+                <input type="text" id="phone" placeholder="شماره تماس" required>
+                <button type="submit">➕ ثبت‌نام</button>
+            </form>
+            <p id="result"></p>
+        </div>
+
+        <!-- بخش اطلاعیه‌ها -->
+        <div class="notice-section card">
+            <h2>📢 تابلوی اعلانات مدرسه</h2>
+            <ul>
+                <li>📅 شروع کلاس‌ها از ۱۵ شهریور</li>
+                <li>📝 آزمون میان‌ترم در آبان ماه</li>
+                <li>👔 استفاده از لباس فرم مدرسه الزامی است</li>
+            </ul>
+        </div>
+
+        <!-- بخش فروشگاه -->
+        <div class="shop-section card">
+            <div class="shop-header">
+                <h2>🛍️ فروشگاه مدرسه</h2>
+                <button id="openCartBtn" class="cart-toggle">سبد خرید (<span id="cartCount">0</span>)</button>
+            </div>
+            <div id="productsGrid" class="products-grid"></div>
+        </div>
+    </div>
+
+    <h2 class="table-title">📚 لیست دانش‌آموزان ثبت‌نام‌شده</h2>
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th>نام و نام خانوادگی</th>
+                <th>سن</th>
+                <th>پایه</th>
+                <th>شماره تماس</th>
+                <th>عملیات</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- سبد خرید -->
+    <aside id="cartPanel" class="cart-panel">
+        <div class="cart-header">
+            <h3>🧺 سبد خرید</h3>
+            <button id="closeCartBtn" class="close-cart">✖</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">مجموع: <span id="cartTotal">0</span> تومان</div>
+            <div class="cart-actions">
+                <button id="clearCartBtn" class="btn-secondary">خالی‌کردن سبد</button>
+                <button id="checkoutBtn" class="btn-primary">پرداخت (آزمایشی)</button>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <p>مدرسه نمونه | طراحی با ❤ محمد</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
