@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dino-Girl Runner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🏃‍♀️ Dino‑Girl Runner</h1>
+      <div class="controls">
+        <span><kbd>Space/↑</kbd> پرش</span>
+        <span><kbd>↓</kbd> دولا (Slide)</span>
+        <span><kbd>P</kbd> مکث</span>
+        <span class="badge">موبایل: لمس = پرش</span>
+      </div>
+    </header>
+
+    <div class="panel">
+      <canvas id="game" width="960" height="260" aria-label="canvas game"></canvas>
+      <div class="hud">
+        <div class="scores">
+          <div>امتیاز: <b id="score">0</b></div>
+          <div>بهترین: <b id="hiscore">0</b></div>
+          <div class="badge" id="speed">سرعت: 1.0×</div>
+        </div>
+        <div class="btns">
+          <button id="btnPause" title="Pause/Resume">⏸️/▶️</button>
+          <button id="btnRestart" title="Restart">🔄 شروع مجدد</button>
+          <button id="btnNight" title="Day/Night">🌙/☀️</button>
+          <button id="btnMute" title="Mute">🔈 بی‌صدا</button>
+        </div>
+      </div>
+    </div>
+    <div class="credit">Designed by <span>Mohammad</span></div>
+
+    <p class="note">الهام گرفته از بازی T‑Rex Chrome. نسخهٔ ساده و بدون وابستگی.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
 
