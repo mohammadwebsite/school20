@@ -1,3 +1,18 @@
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
+let girlX = 50;
+let girlY = 200;
+let speed = 3;
+
+function gameLoop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // رسم دختر (در اینجا فقط از بک‌گراند استفاده شده)
+  girlX += speed;
+  if (girlX > canvas.width - 50 || girlX < 0) speed *= -1;
+  requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
 ```javascript
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
@@ -101,3 +116,4 @@ document.addEventListener('keydown', e => {
 
 loop();
 ```
+
